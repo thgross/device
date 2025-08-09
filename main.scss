@@ -1,0 +1,35 @@
+html, body {
+	background : #F8F9C5;
+	margin     : 0;
+	padding    : 0;
+}
+
+#screen-size {
+
+	.value span:nth-child(1)::after {
+		@media (device-width: 1920px) {
+			content : "1920";
+		}
+	}
+
+	.value span:nth-child(2)::after {
+		@media (device-height: 1200px) {
+			content : "1200";
+		}
+	}
+
+}
+
+#aspect-ratio {
+
+	.value::after {
+
+		@media (device-aspect-ratio : 16 / 10) {
+			content : "16 : 10";
+		}
+		@media (device-aspect-ratio : 16 / 9) {
+			content : "16 : 9";
+		}
+	}
+
+}
